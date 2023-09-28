@@ -33,6 +33,7 @@ void display(Process *p , int n)
     }
     cout<<endl<<endl;
 
+    sort(p ,p+n , [&](Process a , Process b){return a.id < b.id;});
     float avg_wt = 0 , avg_tat = 0;
     cout<<left<<setw(20)<<"Process Id"<<setw(20)<<"Arrival Time"<<setw(20)<<"Burst Time"<<setw(20)<<"Completion Time"<<setw(20)<<"Turn Around Time"<<setw(20)<<"Waiting Time"<<endl;
     for(int i = 0 ; i < n ; i++)
